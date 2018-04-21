@@ -1,4 +1,7 @@
+
+<p align="center">
 <img src="./static/img/logo-zeit.png"/>
+</p>
 
 # Zeit
 
