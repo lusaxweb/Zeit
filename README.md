@@ -1,3 +1,8 @@
+
+<p align="center">
+<img src="./static/img/logo-zeit.png"/>
+</p>
+
 # Zeit
 
 > new proyect lusaxweb
@@ -24,5 +29,3 @@ npm run lint
 ```
 
 ---
-
-
