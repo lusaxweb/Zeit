@@ -29,3 +29,7 @@ npm run lint
 ```
 
 ---
+
+## Lusaxweb
+
+This library was created and is supported by [Lusaxweb](http://www.lusaxweb.com.ve/)
