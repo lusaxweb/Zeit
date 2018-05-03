@@ -20,12 +20,9 @@
       </div>
 
       <div class="con-redes-login">
-        <button class="facebook" type="button" name="button">Google +</button>
-        <button class="googlePlus" type="button" name="button">Facebook</button>
+        <button class="googlePlus" type="button" name="button">Google +</button>
+        <button class="facebook" type="button" name="button">Facebook</button>
       </div>
-
-
-
     </div>
   </div>
 </template>

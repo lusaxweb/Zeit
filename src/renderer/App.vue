@@ -5,12 +5,24 @@
 </template>
 
 <script>
-  import Menu from '@/components/menu.vue'
-
+  import firebase from 'firebase'
+  var config = {
+    apiKey: 'AIzaSyAkj86SiEWzQvWX6jwh9F1ht7lly4ORQGo',
+    authDomain: 'zeit-01.firebaseapp.com',
+    databaseURL: 'https://zeit-01.firebaseio.com',
+    projectId: 'zeit-01',
+    storageBucket: 'zeit-01.appspot.com',
+    messagingSenderId: '1066115437789'
+  }
+  firebase.initializeApp(config)
+  var database = firebase.database()
   export default {
     name: 'zeit',
-    components: {
-      Menu
+    mounted () {
+      console.log('hola', database)
+      firebase.database().ref('/hello').on('value', function (snapshot) {
+        console.log(snapshot.val())
+      })
     }
   }
 </script>
