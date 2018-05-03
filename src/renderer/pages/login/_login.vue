@@ -13,16 +13,16 @@
         <button @click="$emit('register-click')"  class="btn-registro" type="button" name="button">Register</button>
       </div>
 
-      <div class="_o_">
+      <!-- <div class="_o_">
         <span class="linea1"></span>
         <span class="o">o</span>
         <span class="linea2"></span>
       </div>
 
       <div class="con-redes-login">
-        <button class="googlePlus" type="button" name="button">Google +</button>
+        <button @click="loginGooglePlus" class="googlePlus" type="button" name="button">Google +</button>
         <button class="facebook" type="button" name="button">Facebook</button>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
@@ -30,6 +30,8 @@
 <script>
 export default {
   methods: {
+    loginGooglePlus () {
+    },
     login () {
       this.$router.push('/home')
     }
