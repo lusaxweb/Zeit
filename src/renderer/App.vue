@@ -9,6 +9,7 @@
   export default {
     name: 'zeit',
     mounted () {
+      console.log('Maluma Baby!')
       firebase.database().ref('/hello').on('value', function (snapshot) {
         console.log(snapshot.val())
       })
