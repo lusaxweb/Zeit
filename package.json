@@ -6,6 +6,7 @@
   "license": null,
   "main": "./dist/electron/main.js",
   "scripts": {
+    "pull": "git pull https://github.com/lusaxweb/Zeit.git",
     "build": "node .electron-vue/build.js && electron-builder",
     "build:dir": "node .electron-vue/build.js && electron-builder --dir",
     "build:clean": "cross-env BUILD_TARGET=clean node .electron-vue/build.js",
