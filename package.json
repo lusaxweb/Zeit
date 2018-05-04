@@ -1,8 +1,8 @@
 {
   "name": "zeit",
   "version": "0.0.0",
-  "author": "luis daniel <luisdanielrovira8@gmail.com>",
-  "description": "new proyect lusaxweb",
+  "author": "lusaxweb <lusaxweb@gmail.com>",
+  "description": "New proyect lusaxweb",
   "license": null,
   "main": "./dist/electron/main.js",
   "scripts": {
