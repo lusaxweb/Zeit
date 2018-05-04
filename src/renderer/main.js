@@ -13,7 +13,7 @@ Vue.config.productionTip = false
 
 var config = {
   apiKey: 'AIzaSyAkj86SiEWzQvWX6jwh9F1ht7lly4ORQGo',
-  // authDomain: 'zeit-01.firebaseapp.com',
+  authDomain: 'zeit-01.firebaseapp.com',
   databaseURL: 'https://zeit-01.firebaseio.com',
   projectId: 'zeit-01',
   storageBucket: 'zeit-01.appspot.com',

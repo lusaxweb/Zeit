@@ -5,10 +5,11 @@
 </template>
 
 <script>
+  import firebase from 'firebase'
   export default {
     name: 'zeit',
     mounted () {
-      this.firebase.database().ref('/hello').on('value', function (snapshot) {
+      firebase.database().ref('/hello').on('value', function (snapshot) {
         console.log(snapshot.val())
       })
     }
@@ -46,7 +47,7 @@
     color: rgb(var(--primary-zeit))
   }
   .container {
-    background: rgb(250, 250, 250);
+    background: rgb(255, 255, 255);
     height: 100vh;
     width: 100%;
   }
