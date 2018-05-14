@@ -3,17 +3,18 @@
     <h2>Register</h2>
     <div class="con-inputs">
 
+
         <div class="con-span">
           <span v-if="!datos.usuario">
             Requerido*
           </span>
         </div>
-
         <input
           placeholder="Usuario"
           type="text"
           v-model="datos.usuario"
         >
+
 
         <div class="con-span">
           <span v-if="!datos.pass">
@@ -39,6 +40,7 @@
           v-model="datos.repitePass"
         >
 
+
         <div class="con-span">
           <span v-if="!datos.correo">
             Requerido*
@@ -50,6 +52,7 @@
           type="text" value=""
           v-model="datos.correo"
         >
+
 
         <div class="con-span">
           <span v-if="!datos.codArea">
@@ -63,11 +66,13 @@
           v-model="datos.codArea"
         >
 
+
         <div class="con-span">
           <span v-if="!datos.telefono">
             Requerido*
           </span>
         </div>
+
 
         <input
           placeholder="Telefono"

@@ -61,6 +61,7 @@
   }
   .con-login {
     display: flex;
+    flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
     height: 100vh;
@@ -69,7 +70,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-left: 50px;
+    /*padding-left: 50px;*/
     border-left: 1px solid rgba(0, 0, 0, 0.050)
   }
 </style>
