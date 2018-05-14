@@ -5,26 +5,28 @@
       <div class="con-inputs">
         <!-- <input placeholder="Correo" type="text" name="" value="">/ -->
         <vs-input
+          vs-icon="person"
           :vs-valid.sync="validos.email"
           vs-success-text="Correo Valido"
           vs-danger-text="The email does not meet the requirements"
           vs-type="email" vs-label-placeholder="Email" v-model="value1"/>
-          <vs-input
-    :vs-valid.sync="validos.password"
-    vs-success-text="Password Valida"
-    vs-danger-text="The password must have at least 8 characters, 1 number, 1 special character"
-    vs-type="password"
-    vs-label-placeholder="Password" v-model="value4"/>
+        <vs-input
+          vs-icon="lock"
+          :vs-valid.sync="validos.password"
+          vs-success-text="Password Valida"
+          vs-danger-text="The password must have at least 8 characters, 1 number, 1 special character"
+          vs-type="password"
+          vs-label-placeholder="Password" v-model="value4"/>
         <!-- /<input placeholder="Password" type="password" name="" value=""> -->
 
-        <vs-button @click="login" vs-type="primary-filled">Login</vs-button>
+        <vs-button
+          @click="login"
+          vs-width="80%"
+          vs-padding="0"
+          vs-radius="5px"
+          vs-type="primary-filled">Login
+        </vs-button>
         <!-- <button @click="login"  class="btn-login" type="button" name="button">Login</button> -->
-      </div>
-
-      <div class="con-btn-registro">
-        <a href="#">¿Nuevo en Zeit?</a>
-        <vs-button vs-type="primary-filled">Register</vs-button>
-        <!-- <button @click="$emit('register-click')"  class="btn-registro" type="button" name="button">Register</button> -->
       </div>
 
       <!-- <div class="_o_">
