@@ -3,55 +3,91 @@
     <h2>Register</h2>
     <div class="con-inputs">
 
-        <input 
-          placeholder="Usuario" 
-          type="text" 
+        <div class="con-span">
+          <span v-if="!datos.usuario">
+            Requerido*
+          </span>
+        </div>
+
+        <input
+          placeholder="Usuario"
+          type="text"
           v-model="datos.usuario"
         >
 
-        <input 
-          placeholder="Pass" 
-          type="password" 
+        <div class="con-span">
+          <span v-if="!datos.pass">
+            Requerido*
+          </span>
+        </div>
+
+        <input
+          placeholder="Pass"
+          type="password"
           v-model="datos.pass"
         >
 
-        <input 
-          placeholder="Repita la Contraseña" 
-          type="password" 
+        <div class="con-span">
+          <span v-if="!datos.repitePass">
+            Requerido*
+          </span>
+        </div>
+
+        <input
+          placeholder="Repita la Contraseña"
+          type="password"
           v-model="datos.repitePass"
         >
 
-        <input 
-          placeholder="Correo" 
-          type="text" value="" 
+        <div class="con-span">
+          <span v-if="!datos.correo">
+            Requerido*
+          </span>
+        </div>
+
+        <input
+          placeholder="Correo"
+          type="text" value=""
           v-model="datos.correo"
         >
 
-        <input 
-          placeholder="Cod de area" 
+        <div class="con-span">
+          <span v-if="!datos.codArea">
+            Requerido*
+          </span>
+        </div>
+
+        <input
+          placeholder="Cod de area"
           type="text"
           v-model="datos.codArea"
         >
 
-        <input 
-          placeholder="Telefono" 
-          type="text" value="" 
+        <div class="con-span">
+          <span v-if="!datos.telefono">
+            Requerido*
+          </span>
+        </div>
+
+        <input
+          placeholder="Telefono"
+          type="text" value=""
           v-model="datos.telefono"
         >
 
-        <button 
-          class="btn-guardar" 
-          type="button" 
+        <button
+          class="btn-guardar"
+          type="button"
           @click="registrar">Guardar
         </button>
 
-        <button 
+        <button
           name="button"
-          type="button" 
-          @click="$emit('volver-click')">Volver  
+          type="button"
+          @click="$emit('volver-click')">Volver
         </button>
 
-       
+
 
     </div>
   </div>
@@ -119,7 +155,7 @@ export default {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-} 
+}
 
 .con-inputs input {
   width: 100%;
@@ -129,5 +165,15 @@ export default {
   border-radius: 5px;
 }
 
+.con-span {
+  width: 100%;
+  color: rgb(248, 000, 000);
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  font-size: small;
+  font-weight: lighter;
+}
 
 </style>
