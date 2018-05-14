@@ -3,11 +3,24 @@
     <h2>Register</h2>
     <div class="con-inputs">
 
+
+        <div class="con-span">
+          <span v-if="!datos.usuario">
+            Requerido*
+          </span>
+        </div>
         <input
           placeholder="Usuario"
           type="text"
           v-model="datos.usuario"
         >
+
+
+        <div class="con-span">
+          <span v-if="!datos.pass">
+            Requerido*
+          </span>
+        </div>
 
         <input
           placeholder="Pass"
@@ -15,11 +28,24 @@
           v-model="datos.pass"
         >
 
+        <div class="con-span">
+          <span v-if="!datos.repitePass">
+            Requerido*
+          </span>
+        </div>
+
         <input
           placeholder="Repita la Contraseña"
           type="password"
           v-model="datos.repitePass"
         >
+
+
+        <div class="con-span">
+          <span v-if="!datos.correo">
+            Requerido*
+          </span>
+        </div>
 
         <input
           placeholder="Correo"
@@ -27,11 +53,26 @@
           v-model="datos.correo"
         >
 
+
+        <div class="con-span">
+          <span v-if="!datos.codArea">
+            Requerido*
+          </span>
+        </div>
+
         <input
           placeholder="Cod de area"
           type="text"
           v-model="datos.codArea"
         >
+
+
+        <div class="con-span">
+          <span v-if="!datos.telefono">
+            Requerido*
+          </span>
+        </div>
+
 
         <input
           placeholder="Telefono"
@@ -129,5 +170,15 @@ export default {
   border-radius: 5px;
 }
 
+.con-span {
+  width: 100%;
+  color: rgb(248, 000, 000);
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  font-size: small;
+  font-weight: lighter;
+}
 
 </style>

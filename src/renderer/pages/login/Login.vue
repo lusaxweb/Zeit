@@ -1,5 +1,6 @@
 <template>
   <div class="con-login" id="wrapper">
+    <follow/>
     <div class="con-img">
       <img src="/static/img/logo-zeit.png" alt="">
     </div>
@@ -13,12 +14,13 @@
 <script>
   import Register from './_register.vue'
   import Login from './_login.vue'
-
+  import follow from './follow.vue'
   export default {
     name: 'landing-page',
     components: {
       Register,
-      Login
+      Login,
+      follow
     },
     data () {
       return {
