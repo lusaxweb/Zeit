@@ -3,55 +3,55 @@
     <h2>Register</h2>
     <div class="con-inputs">
 
-        <input 
-          placeholder="Usuario" 
-          type="text" 
+        <input
+          placeholder="Usuario"
+          type="text"
           v-model="datos.usuario"
         >
 
-        <input 
-          placeholder="Pass" 
-          type="password" 
+        <input
+          placeholder="Pass"
+          type="password"
           v-model="datos.pass"
         >
 
-        <input 
-          placeholder="Repita la Contraseña" 
-          type="password" 
+        <input
+          placeholder="Repita la Contraseña"
+          type="password"
           v-model="datos.repitePass"
         >
 
-        <input 
-          placeholder="Correo" 
-          type="text" value="" 
+        <input
+          placeholder="Correo"
+          type="text" value=""
           v-model="datos.correo"
         >
 
-        <input 
-          placeholder="Cod de area" 
+        <input
+          placeholder="Cod de area"
           type="text"
           v-model="datos.codArea"
         >
 
-        <input 
-          placeholder="Telefono" 
-          type="text" value="" 
+        <input
+          placeholder="Telefono"
+          type="text" value=""
           v-model="datos.telefono"
         >
 
-        <button 
-          class="btn-guardar" 
-          type="button" 
+        <button
+          class="btn-guardar"
+          type="button"
           @click="registrar">Guardar
         </button>
 
-        <button 
+        <button
           name="button"
-          type="button" 
-          @click="$emit('volver-click')">Volver  
+          type="button"
+          @click="$emit('volver-click')">Volver
         </button>
 
-       
+
 
     </div>
   </div>
@@ -119,7 +119,7 @@ export default {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-} 
+}
 
 .con-inputs input {
   width: 100%;
