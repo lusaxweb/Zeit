@@ -87,5 +87,15 @@ export default {
   border-radius: 5px;
 }
 
+.con-span {
+  width: 100%;
+  color: rgb(248, 000, 000);
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  font-size: small;
+  font-weight: lighter;
+}
 
 </style>
