@@ -29,6 +29,12 @@
         <!-- <button @click="login"  class="btn-login" type="button" name="button">Login</button> -->
       </div>
 
+
+      <div class="con-btn-registro">
+        <a href="#">¿Nuevo en Zeit?</a>
+        <vs-button @click="$emit('register-click')" vs-type="primary-filled">Register</vs-button>
+        <!-- <button @click="$emit('register-click')"  class="btn-registro" type="button" name="button">Register</button> -->
+      </div>
       <!-- <div class="_o_">
         <span class="linea1"></span>
         <span class="o">o</span>
@@ -44,6 +50,7 @@
 </template>
 
 <script>
+import firebase from 'firebase'
 export default {
   data () {
     return {
@@ -58,11 +65,30 @@ export default {
       }
     }
   },
+  computed: {
+    // validacionDatos () {
+    //   var email = this.value1
+    //   var password = this.value4
+    //   if (email === '' || password === '') {
+    //     return false
+    //   } else {
+    //     return true
+    //   }
+    // }
+  },
   methods: {
     loginGooglePlus () {
     },
     login () {
-      this.$router.push('/home')
+      console.log('entre')
+      console.log('value1', this.value1)
+      console.log('value4', this.value4)
+      firebase.auth().signInWithEmailAndPassword(this.value1, this.value4).catch(function (user) {
+        // this.$router.push('/home')
+        console.log('>>>>>>>>>>1')
+      }
+      )
+      console.log('>>>>>>>>>>2')
     }
   }
 }
