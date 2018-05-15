@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="con-user">
     <!-- <router-link to="/">Sign Out</router-link> -->
-    <vs-button @click = "SignOut" vs-type="success-gradient">Success</vs-button>
+    <vs-button @click = "SignOut" vs-type="success-gradient">Sign Out</vs-button>
   </div>
 </template>
 

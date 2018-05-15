@@ -10,11 +10,11 @@
           vs-danger-text="The email does not meet the requirements"
           vs-type="email" vs-label-placeholder="Email" v-model="value1"/>
           <vs-input
-    :vs-valid.sync="validos.password"
-    vs-success-text="Password Valida"
-    vs-danger-text="The password must have at least 8 characters, 1 number, 1 special character"
-    vs-type="password"
-    vs-label-placeholder="Password" v-model="value4"/>
+          :vs-valid.sync="validos.password"
+          vs-success-text="Password Valida"
+          vs-danger-text="The password must have at least 8 characters, 1 number, 1 special character"
+          vs-type="password"
+          vs-label-placeholder="Password" v-model="value4"/>
         <!-- /<input placeholder="Password" type="password" name="" value=""> -->
 
         <vs-button @click="login" vs-type="primary-filled">Login</vs-button>
@@ -23,7 +23,7 @@
 
       <div class="con-btn-registro">
         <a href="#">¿Nuevo en Zeit?</a>
-        <vs-button vs-type="primary-filled">Register</vs-button>
+        <vs-button @click="$emit('register-click')" vs-type="primary-filled">Register</vs-button>
         <!-- <button @click="$emit('register-click')"  class="btn-registro" type="button" name="button">Register</button> -->
       </div>
 
@@ -42,6 +42,7 @@
 </template>
 
 <script>
+import firebase from 'firebase'
 export default {
   data () {
     return {
@@ -56,11 +57,30 @@ export default {
       }
     }
   },
+  computed: {
+    // validacionDatos () {
+    //   var email = this.value1
+    //   var password = this.value4
+    //   if (email === '' || password === '') {
+    //     return false
+    //   } else {
+    //     return true
+    //   }
+    // }
+  },
   methods: {
     loginGooglePlus () {
     },
     login () {
-      this.$router.push('/home')
+      console.log('entre')
+      console.log('value1', this.value1)
+      console.log('value4', this.value4)
+      firebase.auth().signInWithEmailAndPassword(this.value1, this.value4).catch(function (user) {
+        // this.$router.push('/home')
+        console.log('>>>>>>>>>>1')
+      }
+      )
+      console.log('>>>>>>>>>>2')
     }
   }
 }

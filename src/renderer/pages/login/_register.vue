@@ -3,55 +3,19 @@
     <h2>Register</h2>
     <div class="con-inputs">
 
-        <input 
-          placeholder="Usuario" 
-          type="text" 
-          v-model="datos.usuario"
-        >
+      <vs-input vs-label-placeholder="Email" v-model="datos.usuario"/>
 
-        <input 
-          placeholder="Pass" 
-          type="password" 
-          v-model="datos.pass"
-        >
+      <vs-input vs-label-placeholder="Password" v-model="datos.pass" vs-type="password"/>
 
-        <input 
-          placeholder="Repita la Contraseña" 
-          type="password" 
-          v-model="datos.repitePass"
-        >
+      <vs-input vs-label-placeholder="Confirm Password" v-model="datos.repitePass"/>
 
-        <input 
-          placeholder="Correo" 
-          type="text" value="" 
-          v-model="datos.correo"
-        >
+      <vs-input vs-label-placeholder="Cod de area" v-model="datos.codArea"/>
 
-        <input 
-          placeholder="Cod de area" 
-          type="text"
-          v-model="datos.codArea"
-        >
+      <vs-input vs-label-placeholder="Telefono" v-model="datos.telefono"/>
 
-        <input 
-          placeholder="Telefono" 
-          type="text" value="" 
-          v-model="datos.telefono"
-        >
+      <vs-button  class="btn-guardar" type="button" @click="registrar">Save </vs-button>
 
-        <button 
-          class="btn-guardar" 
-          type="button" 
-          @click="registrar">Guardar
-        </button>
-
-        <button 
-          name="button"
-          type="button" 
-          @click="$emit('volver-click')">Volver  
-        </button>
-
-       
+      <vs-button name="button" vs-type="primary-filled" @click="$emit('volver-click')">Back </vs-button>
 
     </div>
   </div>
@@ -77,15 +41,10 @@ export default {
   methods: {
     // es: Este metodo se utiliza para registrar el Json en firebase
     registrar () {
-      firebase.database().ref('registroDeUsuario').push(
-        {
-          'usuario': this.datos.usuario,
-          'pass': this.datos.pass,
-          'repita': this.datos.repitePass,
-          'correo': this.datos.correo,
-          'codArea': this.datos.codArea,
-          'telefono': this.datos.telefono
-        }
+      console.log('this.datos.usuario', this.datos.usuario)
+      // this.$router.push('/home')
+      firebase.auth().createUserWithEmailAndPassword(this.datos.usuario, this.datos.pass).catch(function (user) {
+      }
       )
       this.clear()
     },
@@ -119,13 +78,12 @@ export default {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-} 
+}
 
 .con-inputs input {
   width: 100%;
   padding: 10px;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  margin: 8px;
   border-radius: 5px;
 }
 
