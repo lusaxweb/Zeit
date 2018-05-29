@@ -8,7 +8,14 @@
       <Login @register-click="register=true"  v-if="!register"/>
       <Register @volver-click="register=false"  v-else/>
     </div>
-  </div>
+    <div class="con-footer" id="footer">
+      <footer>
+        <div  class="con-copyright"> <p>Copyright &copy; 2018 Lusax Web</p> </div> 
+        <div class="con-version" >  <p >V.0.0.1 </p> </div> 
+      </footer>
+    </div>
+
+    </div>
 </template>
 
 <script>
@@ -73,4 +80,27 @@
     /*padding-left: 50px;*/
     border-left: 1px solid rgba(0, 0, 0, 0.050)
   }
+
+  .con-footer {
+    /*clear:both*/
+    position: absolute;
+    bottom:20px;
+    width:95%;
+    
+  }
+
+  .con-copyright {
+    float: left;
+    font-family: verdana;
+    font-size: 10px;
+  }
+  .con-version {
+    left:  50%;
+    float: right;
+    font-family: verdana;
+    font-size: 10px;
+  }
+
+ 
+  
 </style>
