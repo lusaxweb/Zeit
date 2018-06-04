@@ -10,7 +10,7 @@
     name: 'zeit',
     mounted () {
       console.log('Maluma Baby 2!')
-      firebase.database().ref('/hello').on('value', function (snapshot) {
+      firebase.database().ref('/nodoNuevo').on('value', function (snapshot) {
         console.log(snapshot.val())
       })
     }
