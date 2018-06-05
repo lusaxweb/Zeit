@@ -2,6 +2,7 @@
   <div class="con-login" id="wrapper">
     <follow/>
     <div class="con-registroLogin">   
+      
       <div class="con-img">
         <img src="/static/img/logo-zeit.png" alt="">
       </div>
@@ -10,7 +11,11 @@
         <Login @register-click="register=true"  v-if="!register"/>
         <Register @volver-click="register=false"  v-else/>
       </div>
+      
+      
+    
     </div>
+    
     
     <div class="con-footer" id="footer">
       <footer >
@@ -77,7 +82,7 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-    position: relative;
+    position: absolute;
     width: 100%;
   }
 
@@ -113,12 +118,12 @@
  .con-footer:before {
      width: 8px;     
      background:white;
-     content: '';
+     content:'';
      position: absolute;
      left: 0px;
      top: 29%;
      height: 45%;
-     border-radius: 0px 5px 5px 0px;
+     border-radius: 5px 5px 5px 0px;
 }
 
   .con-copyright a {
@@ -126,6 +131,10 @@
 }
   
   .con-registroLogin{
-    width: calc(100% - 200px);
+    width: calc(100% - 300px);
+    display:flex;
+    flex-direction: column;
   }
+
+  
 </style>
