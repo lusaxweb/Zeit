@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="con-component-login">
     <div class="login">
-      <h2>Login</h2>
+      <!-- <h2>Login</h2> -->
       <div class="con-inputs">
         <!-- <input placeholder="Correo" type="text" name="" value="">/ -->
         <vs-input
