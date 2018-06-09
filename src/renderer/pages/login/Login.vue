@@ -19,8 +19,11 @@
     
     <div class="con-footer" id="footer">
       <footer >
-        <div class="con-copyright"> <a href="http://www.lusaxweb.com.ve/" target="_blank">Copyright &copy; 2018 Lusax Web</a> </div>
-        <div class="con-version" >  <p >V {{version}} </p> </div> 
+        <div class="contenedor">
+          <div class="Copyright"><p>Copyright &copy; 2018 </p></div>
+          <div class="con-copyright">  <a href="http://www.lusaxweb.com.ve/" target="_blank">  Lusax Web</a></div>
+        </div>
+        <div class="con-version" >  <p >V {{version}} </p> </div>  
       </footer>      
     </div>
   </div>
@@ -77,6 +80,19 @@
   .con-img img {
     width: 150px;
   }
+
+   .contenedor{
+    display:flex;
+    justify-content:space-between;
+
+  }
+
+  .contenedor p {
+    color:white;
+    font-family: verdana;
+    font-size: 10px;
+    padding:2px;
+  }
   .con-login {
     display: flex;    
     align-items: center;
@@ -105,9 +121,11 @@
     justify-content: space-between;
     width:100%;
 }
+
   .con-copyright {
     font-family: verdana;
     font-size: 10px;
+    padding:2px;
 
   }
   .con-version {
@@ -123,7 +141,7 @@
      left: 0px;
      top: 29%;
      height: 45%;
-     border-radius: 5px 5px 5px 0px;
+     border-radius: 0px 5px 5px 0px;
 }
 
   .con-copyright a {
@@ -134,6 +152,7 @@
     width: calc(100% - 300px);
     display:flex;
     flex-direction: column;
+    height:800;
   }
 
   
