@@ -24,27 +24,27 @@
           vs-width="80%"
           vs-padding="0"
           vs-radius="5px"
-          vs-type="primary-filled">Login
+          vs-type="primary-filled">Get started
         </vs-button>
         <!-- <button @click="login"  class="btn-login" type="button" name="button">Login</button> -->
       </div>
 
 
-      <div class="con-btn-registro">
+    <!--   <div class="con-btn-registro">
         <a href="#">¿Nuevo en Zeit?</a>
         <vs-button @click="$emit('register-click')" vs-type="primary-filled">Register</vs-button>
-        <!-- <button @click="$emit('register-click')"  class="btn-registro" type="button" name="button">Register</button> -->
-      </div>
-      <!-- <div class="_o_">
+        <button @click="$emit('register-click')"  class="btn-registro" type="button" name="button">Register</button>
+      </div> -->
+      <div class="_o_">
         <span class="linea1"></span>
         <span class="o">o</span>
         <span class="linea2"></span>
       </div>
 
       <div class="con-redes-login">
-        <button @click="loginGooglePlus" class="googlePlus" type="button" name="button">Google +</button>
         <button class="facebook" type="button" name="button">Facebook</button>
-      </div> -->
+        <button @click="loginGooglePlus" class="googlePlus" type="button" name="button">Google +</button>
+      </div>
     </div>
   </div>
 </template>
@@ -160,6 +160,7 @@ export default {
   padding-left: 10px;
   padding-right: 10px;
   text-transform: uppercase;
+  font-weight: bold;
 }
 
 
@@ -177,13 +178,23 @@ export default {
   margin: 3px;
   border: 0px;
   border-radius: 7px;
-  color: rgb(255, 255, 255);
+  color: rgb(var(--primary-zeit));
+  font-size: 1em;
 }
+
 .facebook {
-  background: rgb(var(--facebook))
+  background: rgb(255,255,255)
 }
 .googlePlus {
-  background: rgb(var(--google-plus))
+  background: rgb(255,255,255)
+}
+.facebook:hover {
+  background: rgb(var(--facebook));
+  color:rgb(255,255,255);
+}
+.googlePlus:hover {
+  background: rgb(var(--google-plus));
+  color:rgb(255,255,255);
 }
 
 
