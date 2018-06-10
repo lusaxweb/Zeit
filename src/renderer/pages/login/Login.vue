@@ -1,8 +1,8 @@
 <template>
   <div class="con-login" id="wrapper">
     <follow/>
-    <div class="con-registroLogin">   
-      
+    <div class="con-registroLogin">
+
       <div class="con-img">
         <img src="/static/img/logo-zeit.png" alt="">
       </div>
@@ -11,20 +11,20 @@
         <Login @register-click="register=true"  v-if="!register"/>
         <Register @volver-click="register=false"  v-else/>
       </div>
-      
-      
-    
+
+
+
     </div>
-    
-    
+
+
     <div class="con-footer" id="footer">
       <footer >
         <div class="contenedor">
           <div class="Copyright"><p>Copyright &copy; 2018 </p></div>
           <div class="con-copyright">  <a href="http://www.lusaxweb.com.ve/" target="_blank">  Lusax Web</a></div>
         </div>
-        <div class="con-version" >  <p >V {{version}} </p> </div>  
-      </footer>      
+        <div class="con-version" >  <p >V {{version}} </p> </div>
+      </footer>
     </div>
   </div>
 
@@ -94,11 +94,11 @@
     padding:2px;
   }
   .con-login {
-    display: flex;    
+    display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    position: absolute;
+    /*position: absolute;*/
     width: 100%;
   }
 
@@ -134,7 +134,7 @@
   }
 
  .con-footer:before {
-     width: 8px;     
+     width: 8px;
      background:white;
      content:'';
      position: absolute;
@@ -147,7 +147,7 @@
   .con-copyright a {
     color:white;
 }
-  
+
   .con-registroLogin{
     width: calc(100% - 300px);
     display:flex;
@@ -155,5 +155,5 @@
     height:800;
   }
 
-  
+
 </style>

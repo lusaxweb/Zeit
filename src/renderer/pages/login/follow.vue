@@ -21,8 +21,12 @@
       </nav>
 
       <div class="con-button" >
-        <div class="ogin"> <button>Login</button> </div>
-        <div class="sing-in" > <button>Sing in</button> </div>
+        <div>
+          <button v-bind:class="{ active: focus }">Login</button>
+        </div>
+        <div>
+          <button v-bind:class="{ active: focus }">Sing in</button>
+        </div>
       </div>
     </div>
 </template>
@@ -37,12 +41,12 @@ export default {
 
 
   .contenedor-lv-1{
+    position: relative;
     display: flex;
-    height:100%;
-    width:400px ;
+    flex-flow: nowrap column;
+    height: 100vh;
+    width: 25%;
     background-color: #b800e6;
-    flex-direction: column;
-    flex-wrap: nowrap;
   }
 
   .con-link{
@@ -134,43 +138,59 @@ export default {
   width: 25px;
 }
 
+.con-button{
+  position: relative;
+  display: flex;
+  flex-flow: nowrap column;
+  align-items: flex-end;
+  justify-content: center;
+  top: 45vh;
+  right: 0px;
+  /*width: 30%;*/
+  /*background: black;*/
+}
 
+.con-button div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  /*background-color:blue;*/
+}
 
-  .con-button{
-    position: relative;
-    flex-direction: column;
-    height:20%;
-    width:30%;
-    top: 40%;
-    left: 78%;
-    flex-direction: column;
-  }
+.con-button button {
+  width: 100%;
+  height: 10vh;
+  margin: 0px;
+  background: inherit;
+  font-size: 16px;
+  color: white;
+  border-radius:0px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
 
-   .ogin {
-    height:60px;
-  }
+/*.con-button button::before{
+  content: "";
+  height: 5vh;
+  width: 10%;
+  margin: 0px;
+  top: -30px;
+  right: 0px;
+  border-radius: 25%;
+  background-color: red;
+  position: absolute;
+  z-index: 1;
+}*/
 
-  .ogin button {
-    font-family: verdana;
-    font-size: 15px;
-    background: white;
-    width:80px;
-    height: 60px;
-    border-radius: 10px 0px 0px 10px;
-    color: blue;
-  }
-
-  .sing-in button{
-    position: relative;
-    top:0px;
-    font-family: verdana;
-    font-size: 15px;
-    background: white;
-    width:80px;
-    height: 60px;
-    border-radius: 10px 0px 0px 10px;
-    color: blue;
-  }
+.con-button button:focus {
+  transition-duration: 0.5s;
+  background-color: rgb(255,255,255);
+  color: rgb(var(--primary-zeit));
+  border-top-left-radius: 15px;
+  border-top-rigth-radius: none;
+  border-bottom-left-radius: 15px;
+}
 
 
 
